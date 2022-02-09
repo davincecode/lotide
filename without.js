@@ -17,6 +17,8 @@ const without = (arr1, arr2) => {
 
 };
 
-console.log(without([1, 2, 3], [1]));
-console.log(without(["1", "2", "3"], [1, 2, "3"]));
+console.log(assertEqual(without([1, 2, 3], [3]), false));    // => should PASS
+console.log(assertEqual(without([1, 2, 3], [3, 2, 1]), true));    // => should Fail
+console.log(assertEqual(without(["1", "2", "3"], ["1", "2", "3"]), true));    // => should PASS
+console.log(assertEqual(without(["1", "2", "3"], ["1", "2", 3]), true));    // => should Fail
 
