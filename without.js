@@ -1,8 +1,8 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    return `✅✅✅${actual} === ${expected}`;
+    console.log(`✅  Assertion passed: ${actual} === ${expected}`);
   } else {
-    return `🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`;
+    console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
   }
 };
 
@@ -17,8 +17,5 @@ const without = (arr1, arr2) => {
 
 };
 
-console.log(assertEqual(without([1, 2, 3], [3]), false));    // => should PASS
-console.log(assertEqual(without([1, 2, 3], [3, 2, 1]), true));    // => should Fail
-console.log(assertEqual(without(["1", "2", "3"], ["1", "2", "3"]), true));    // => should PASS
-console.log(assertEqual(without(["1", "2", "3"], ["1", "2", 3]), true));    // => should Fail
+console.log(assertEqual(without([1, 2, 3], [3]), false));
 
