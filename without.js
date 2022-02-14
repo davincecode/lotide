@@ -7,7 +7,6 @@ const assertEqual = function(actual, expected) {
 };
 
 
-
 const _ = require('lodash');
 
 const without = (arr1, arr2) => {

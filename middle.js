@@ -1,10 +1,9 @@
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = (arr1, arr2) => {
   if (eqArrays(arr1, arr2)) {
     console.log(`✅✅✅Assertion Passed`);
   } else {
     console.log(`🛑🛑🛑Assertion Failed`);
   }
-
 };
 
 const eqArrays = (arr1, arr2) => {
@@ -21,7 +20,6 @@ const eqArrays = (arr1, arr2) => {
 };
 
 const findMedian = (numArray) => {
-
   let accumulator = [];
 
   //Split the array in half
@@ -31,19 +29,19 @@ const findMedian = (numArray) => {
   //find the median
   if (!(numArray.length >= 3)) {
     return accumulator;
-
-  } else if (numArray.length % 2 === 0) {
+  }
+  //check if it's odd. odd will output 2 middle variables.
+  if (numArray.length % 2 === 0) {
     accumulator.push(numArray[middle - 1]);
+    console.log(accumulator);
     accumulator.push(numArray[middle]);
-    // console.log("middle numbers is even: " + numArray[middle - 1]  + " and " + numArray[middle]);
+    console.log(accumulator);
     return accumulator;
-
   } else {
     accumulator.push(numArray[middle]);
-    // console.log("middle number is odd: " + numArray[middle]);
+    console.log(accumulator);
     return accumulator;
   }
-
 };
 
 assertArraysEqual(findMedian([1]), []); // => []
