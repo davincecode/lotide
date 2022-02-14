@@ -1,24 +1,3 @@
-const assertArraysEqual = (arr1, arr2) => {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅Assertion Passed`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed`);
-  }
-};
-
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
-
 const findMedian = (numArray) => {
   let accumulator = [];
 
@@ -44,11 +23,4 @@ const findMedian = (numArray) => {
   }
 };
 
-assertArraysEqual(findMedian([1]), []); // => []
-assertArraysEqual(findMedian([1, 2]), []); // => []
-
-assertArraysEqual(findMedian([1, 2, 3]), [2]); // => [2]
-assertArraysEqual(findMedian([1, 2, 3, 4, 5]), [3]); // => [3]
-
-assertArraysEqual(findMedian([1, 2, 3, 4]), [2, 3]); // => [2, 3]
-assertArraysEqual(findMedian([1, 2, 3, 4, 5, 6]), [3, 4]); // => [3, 4]
+module.exports = findMedian;
