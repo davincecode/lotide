@@ -1,4 +1,5 @@
-const assertEqual = function(actual, expected) {
+/* eslint-disable space-before-function-paren */
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅  Assertion passed: ${actual} === ${expected}`);
   } else {
@@ -6,15 +7,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-
-const _ = require('lodash');
+const _ = require("lodash");
 
 const without = (arr1, arr2) => {
-
   const result = _.without(arr1, ...arr2);
   return result;
-
 };
 
-console.log(assertEqual(without([1, 2, 3], [3]), false));
-
+assertEqual(without([1, 2, 3], [3]), false);
